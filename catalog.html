@@ -6,7 +6,7 @@
 </head>
 <body>
     <header class="page-header">
-        <img src="index.html" alt="Логотип Седона" class="Sedona-logo">
+      <a href="index.html"><img src="#" alt="Логотип Седона" class="Sedona-logo"></a>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -16,7 +16,7 @@
               <a href="#" class="navigation-link">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a href="catalog.html" class="navigation-link navigation-link-current">Гостиницы</a>
+              <a class="navigation-link navigation-link-current">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -36,9 +36,9 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a href="#" class="navigation-link">
+              <button type="button" class="navigation-link">
                 Хочу сюда!
-              </a>
+              </button>
             </li>
           </ul>
       </header>
@@ -67,15 +67,15 @@
                 <legend class="catalog-filter-title">Инфраструктура</legend>
                 <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
-                      <input class="infrastructure-item" type="checkbox" name="infrastructure" id="pool-item" checked>
+                      <input class="infrastructure-item" type="checkbox" value="1" name="pool" id="pool-item" checked>
                       <label for="pool-item">Бассейн</label>
                     </li>
                     <li class="catalog-filter-item">
-                      <input class="infrastructure-item" type="checkbox" name="infrastructure" id="parking-item" checked>
+                      <input class="infrastructure-item" type="checkbox" value="2" name="parking" id="parking-item" checked>
                       <label for="parking-item">Парковка</label>
                     </li>
                     <li class="catalog-filter-item">
-                      <input class="infrastructure-item" type="checkbox" name="infrastructure" id="wi-fi-item">
+                      <input class="infrastructure-item" type="checkbox" value="3" name="Wi-fi" id="wi-fi-item">
                       <label for="wi-fi-item">Wi-fi</label>
                     </li>
                 </ul>
@@ -84,15 +84,15 @@
                 <legend class="catalog-filter-title">Тип Жилья</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
-                    <input class="housing-item" type="radio" name="housing" id="hotel-item" checked>
+                    <input class="housing-item" type="radio" value="1" name="housing" id="hotel-item" checked>
                     <label for="hotel-item">Гостиница</label>
                   </li>
                   <li class="catalog-filter-item">
-                    <input class="housing-item" type="radio" name="housing" id="motel-item">
+                    <input class="housing-item" type="radio" value="2" name="housing" id="motel-item">
                     <label for="motel-item">Мотель</label>
                   </li>
                   <li class="catalog-filter-item">
-                    <input class="housing-item" type="radio" name="housing" id="apartments-item">
+                    <input class="housing-item" type="radio" value="3" name="housing" id="apartments-item">
                     <label for="apartments-item">Апартаменты</label>
                   </li>
               </ul>
@@ -113,7 +113,7 @@
 
               <button class="setup-button" type="submit">Применить</button>
 
-              <button class="reset-button" type="submit">Сбросить</button>
+              <button class="reset-button" type="reset">Сбросить</button>
             </form>
         </section>
 
@@ -145,7 +145,7 @@
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-cost">От 4000 ₽</p>
                 <a href="#" class="more-info">Подробнее</a>
-                <a href="#" class="to-favorites">В избранное</a>
+                <button class="to-favorites">В избранное</button>
                 <div class=”rating”>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
@@ -162,7 +162,7 @@
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-cost">От 5000 ₽</p>
                 <a href="#" class="more-info">Подробнее</a>
-                <a href="#" class="in-favorites">В избранном</a>
+                <button class="in-favorites">В избранном</button>
                 <div class=”rating”>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
@@ -179,7 +179,7 @@
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-cost">От 2500 ₽</p>
                 <a href="#" class="more-info">Подробнее</a>
-                <a href="#" class="to-favorites">В избранное</a>
+                <button class="to-favorites">В избранное</button>
                 <div class=”rating”>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
@@ -195,7 +195,7 @@
                 <p class="hotel-type">Гостиница</p>
                 <p class="hotel-cost">От 1500 ₽</p>
                 <a href="#" class="more-info">Подробнее</a>
-                <a href="#" class="to-favorites">В избранное</a>
+                <button class="to-favorites">В избранное</button>
                 <div class=”rating”>
                   <span class="star">&#9733;</span>
                   <span class="star">&#9733;</span>
