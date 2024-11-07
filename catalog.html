@@ -6,47 +6,49 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="page-header">
-        <nav class="navigation">
-          <div class="main-navigation">
-            <a href="index.html"><img src="images/sedona-logo.svg" width="140" height="70" alt="Логотип Седона" class="Sedona-logo"></a>
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a href="index.html" class="navigation-link">Главная</a>
-            </li>
-            <li class="navigation-item">
-              <a href="#" class="navigation-link">О Седоне</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link navigation-link-current">Гостиницы</a>
-            </li>
-          </ul>
-          </div>
-          <div class="navigation-user">
-            <ul class="navigation-list">
-              <li class="navigation-item">
-                <a href="#" class="navigation-link">
-                  <span class="visually-hidden">
-                    Поиск
-                  </span>
-                </a>
-              </li>
-              <li class="navigation-item">
-                <a href="#" class="navigation-link">
-                  <span class="visually-hidden">
-                    Избранное
-                  </span>
-                </a>
-              </li>
-              <li class="navigation-item">
-                <button type="button" class="navigation-link button">
-                  Хочу сюда!
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+  <header class="page-header">
+    <nav class="navigation">
+      <div class="header-navigation">
+      <div class="main-navigation">
+        <a href="index.html"><img src="images/sedona-logo.svg" width="140" height="70" alt="Логотип Седона" class="Sedona-logo"></a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="index.html" class="navigation-link navigation-link-current">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a href="catalog.html" class="navigation-link">Гостиницы</a>
+          </li>
+        </ul>
+      </div>
+      
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">
+              <span class="visually-hidden">
+                Поиск
+              </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">
+              <span class="visually-hidden">
+                Избранное
+              </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <button class="button">
+              Хочу сюда!
+            </button>
+          </li>
+        </ul>
+      
+    </div>
+    </nav>
+  </header>
 
       <main class="main-container main-inner">
         <div class="page-container">
@@ -56,6 +58,7 @@
             <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
                     <a href="index.html" class="breadcrumbs-link">
+                        <img src="images/home.svg" width="12" height="12" alt="Главная страница">
                         <span class="visually-hidden">
                             Главная
                         </span>
@@ -69,7 +72,7 @@
             </ul>
     
             <section class="hotel-filter">
-                <h2 class="visually-hidden" hidden>Фильтрация по гостиницам</h2>
+                <h2 class="visually-hidden">Фильтрация по гостиницам</h2>
                 <form action="https://echo.htmlacademy.ru/" method="get" class="catalog-filter">
                   <fieldset class="catalog-filter-group infrastructure-filter">
                     <legend class="catalog-filter-title">Инфраструктура</legend>
@@ -125,27 +128,37 @@
                 </form>
             </section>
           </div>
-        
         </div>
         <section class="filter-result">
-            <h2 class="visually-hidden" hidden>Результаты фильтрации</h2>
-            <h3 class="filter-result-title">Найдено гостиниц: 38</h3>
-            <select class="sorting-options" aria-label="Сортировка">
-              <option class="option" value="cheap">Сначала дешевые</option>
-              <option class="option" value="expensive">Сначала дорогие</option>
-              <option class="option" value="popular">Сначала популярные</option>
-            </select>
-            <ul class="view-list">
-              <li class="view-item">
-                <a href="#" class="view-link view-current" title="Карточки">Показать карточки</a>
-              </li>
-              <li class="view-item">
-                <a href="#" class="view-link" title="Большая карточка">Показать большую карточку</a>
-              </li>
-              <li class="view-item">
-                <a href="#" class="view-link" title="Список">Показать список</a>
-              </li>
-            </ul>
+            <h2 class="visually-hidden">Результаты фильтрации</h2>
+            <div class="filter-header">
+              <h3 class="filter-result-title">Найдено гостиниц: 38</h3>
+              <select class="sorting-options" aria-label="Сортировка">
+                <option class="option" value="cheap">Сначала дешевые</option>
+                <option class="option" value="expensive">Сначала дорогие</option>
+                <option class="option" value="popular">Сначала популярные</option>
+              </select>
+              <ul class="view-list">
+                <li class="view-item">
+                  <a href="#" class="view-link view-current" title="Карточки">
+                    <img src="images/gallery-view.svg" width="16" height="14" alt="Галерея">
+                    <span class="visually-hidden">Показать карточки</span>
+                  </a>
+                </li>
+                <li class="view-item">
+                  <a href="#" class="view-link" title="Большая карточка">
+                    <img src="images/card-view.svg" width="16" height="14" alt="Карточка">
+                    <span class="visually-hidden">Показать большую карточку</span>
+                  </a>
+                </li>
+                <li class="view-item">
+                  <a href="#" class="view-link" title="Список">
+                    <img src="images/list-view.svg" width="16" height="14" alt="Список">
+                    <span class="visually-hidden">Показать список</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <ul class="hotel-list">
               <li class="hotel-item">
                 <a href="#" class="hotel-link">
@@ -252,9 +265,9 @@
       <div class="page-footer-container">
         <footer class="page-footer">
         <section class="contacts">
-          <h2 class="visually-hidden" hidden>Контактная информация</h2>
+          <h2 class="visually-hidden">Контактная информация</h2>
           <ul class="contacts-list">
-            <li class="socialnet-item">
+            <li class="contacts-item">
               <a href="https://vk.com/htmlacademy" target="_blank">
                 <span class="visually-hidden">
                   Вконтакте
@@ -278,8 +291,10 @@
                 <img src="images/youtube-logo.svg" width="22" height="17" alt="Ютуб">
               </a>
             </li>
+            <li class="contacts-item">
+              <a href="tel:+78128121212" class="contacts-phone">+7 (812) 812-12-12</a>
+            </li>
           </ul>
-          <a href="tel:+78128121212" class="contacts-phone">+7 (812) 812-12-12</a>
         </section>
       </footer>
       </div>
