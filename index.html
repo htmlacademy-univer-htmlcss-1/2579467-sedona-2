@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-
+    <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
+        <div class="header-navigation">
         <div class="main-navigation">
           <img src="images/sedona-logo.svg" width="140" height="70" alt="Логотип Седона" class="Sedona-logo">
           <ul class="navigation-list">
@@ -21,12 +22,14 @@
             <li class="navigation-item">
               <a href="catalog.html" class="navigation-link">Гостиницы</a>
             </li>
+            
           </ul>
         </div>
-        <div class="navigation-user">
-          <ul class="navigation-list">
+        
+          <ul class="navigation-list navigation-user">
             <li class="navigation-item">
               <a href="#" class="navigation-link">
+                <img src="images/search.svg" alt="Поиск" width="20" height="20">
                 <span class="visually-hidden">
                   Поиск
                 </span>
@@ -34,18 +37,20 @@
             </li>
             <li class="navigation-item">
               <a href="#" class="navigation-link">
+                <img src="images/favourites.svg" alt="Избранное" height="20" width="20">
                 <span class="visually-hidden">
                   Избранное
                 </span>
               </a>
             </li>
-            <li class="navigation-item">
-              <button class="navigation-link button">
+            <li class="navigation-item navigation-link">
+              <button class="button">
                 Хочу сюда!
               </button>
             </li>
           </ul>
-        </div>
+        
+      </div>
       </nav>
     </header>
 
@@ -153,9 +158,10 @@
     <div class="page-footer-container">
       <footer class="page-footer">
       <section class="contacts">
-        <h2 class="visually-hidden" hidden>Контактная информация</h2>
+        <h2 class="visually-hidden">Контактная информация</h2>
         <ul class="contacts-list">
-          <li class="socialnet-item">
+          <div class="social-container">
+          <li class="contacts-item social-item">
             <a href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">
                 Вконтакте
@@ -163,7 +169,7 @@
               <img src="images/vk-logo.svg" width="24" height="14" alt="Вконтакте">
             </a>
           </li>
-          <li class="contacts-item">
+          <li class="contacts-item social-item">
             <a href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">
                 Телеграм
@@ -171,7 +177,7 @@
               <img src="images/telegram-logo.svg" width="18" height="15" alt="Телеграм">
             </a>
           </li>
-          <li class="contacts-item">
+          <li class="contacts-item social-item">
             <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
               <span class="visually-hidden">
                 Ютуб
@@ -179,10 +185,22 @@
               <img src="images/youtube-logo.svg" width="22" height="17" alt="Ютуб">
             </a>
           </li>
+        </div>
+          <li class="contacts-item">
+            <a href="tel:+78128121212" class="contacts-phone">+7 (812) 812-12-12</a>
+          </li>
+          <li class="contacts-item academy-item">
+            <a href="https://htmlacademy.ru/" target="_blank">
+              <span class="visually-hidden">
+                HTML Academy
+              </span>
+              <img src="images/HTML Academy.svg" width="115" height="33" alt="HTML Academy">
+            </a>
+          </li>
         </ul>
-        <a href="tel:+78128121212" class="contacts-phone">+7 (812) 812-12-12</a>
       </section>
     </footer>
     </div>
+  </div>
   </body>
 </html>
