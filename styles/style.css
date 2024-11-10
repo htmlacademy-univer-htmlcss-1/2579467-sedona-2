@@ -5,7 +5,7 @@
     src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
 }
-  
+
   @font-face {
     font-family: "PT Sans";
     font-style: normal;
@@ -67,7 +67,7 @@ body {
 }
 
 .main-navigation {
-    width: 507px;
+    width: 750px;
     display: flex;
     margin-right: 28px;
 }
@@ -98,10 +98,14 @@ body {
 }
 
 .navigation-user .navigation-link {
-    padding: 0;
     padding: 22px 12px;
     margin: 0;
 }
+
+.navigation-item.navigation-link {
+    padding-right: 0;
+}
+
 
 
 .welcome-to-sedona {
@@ -221,7 +225,7 @@ body {
 
 .town-advantages-item .second, .town-advantages-item .fofth {
     background-color: #83B3D31F;
-    
+
 }
 
 .town-advantages-item .third {
@@ -281,7 +285,7 @@ body {
 
 .hotel-search-title {
     width: 297px;
-} 
+}
 
 .hotel-search-description {
     width: 592px;
@@ -363,7 +367,7 @@ body {
 .page-footer-container {
     width: 1060px;
     margin: 0 auto;
-    
+
 }
 
 .social-container {
@@ -446,15 +450,6 @@ body {
     margin-right: 0;
 }
 
-.hotel-item {
-    width: 300px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-} 
-
-.hotel-item:nth-child(3n) {
-    margin-right: 0;
-}
 
 .infrastructure-filter, .hotel-type-filter {
     width: 150px;
@@ -470,16 +465,84 @@ body {
 
 .hotel-type-filter {
     margin-right: 140px;
-} 
+}
 
 .hotel-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    list-style-type: none;
     margin: 0 auto;
     padding: 0;
-    justify-content: space-between;
+    gap: 20px;
     margin-bottom: 80px;
 }
+
+.hotel-item {
+    display: grid;
+    grid-template-areas:
+        "hotel hotel"
+        "type price"
+        "info fav"
+        "stars rating";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.hotel-item img {
+    margin-bottom: 16px;
+}
+
+.hotel-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.hotel-link {
+    grid-area: hotel;
+}
+
+.hotel-type {
+    grid-area: type;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.hotel-cost {
+    grid-area: price;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.more-info {
+    grid-area: info;
+    padding: 8px 16px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.to-favorites {
+    grid-area: fav;
+    padding: 8px 16px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.hotel-rating {
+    grid-area: rating;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.rating {
+    grid-area: stars;
+}
+
 
 .sedona-hotel {
     background-image: url(../images/filter.jpg);
@@ -570,6 +633,7 @@ body {
 }
 
 .hotel-link {
+    display: block;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
@@ -613,7 +677,7 @@ body {
 
 .pagination-item:last-child {
     margin-right: 0;
-    
+
 }
 
 .pagination-link {
@@ -630,7 +694,7 @@ body {
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .pagination-current {
     color: #000;
