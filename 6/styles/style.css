@@ -26,8 +26,14 @@ body {
     font-size: 18px;
     line-height: 21px;
     color: black;
-    background-color: #fff;
+    background-color: #F2F2F2;
     margin: 0;
+}
+
+.page-container {
+    background-color:white;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 
@@ -74,11 +80,11 @@ body {
     padding: 0;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navigation-user {
     margin-left: auto;
-    align-items: center;
 }
 
 .navigation-link {
@@ -91,10 +97,12 @@ body {
     color: black;
 }
 
-.page-container {
-    width: 1200px;
-    margin: 0 auto;
+.navigation-user .navigation-link {
+    padding: 0;
+    padding: 22px 12px;
+    margin: 0;
 }
+
 
 .welcome-to-sedona {
     padding-top: 50px;
@@ -142,6 +150,8 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .search-link {
@@ -336,7 +346,10 @@ body {
     line-height: 40px;
     text-decoration: none;
     color: #000;
+    margin-right: 235px;
 }
+
+
 
 .e-mail {
     margin: 0;
@@ -353,28 +366,29 @@ body {
     
 }
 
-.contacts {
+.social-container {
     display: flex;
+    flex-wrap: wrap;
+    width: 142px;
+    margin-right: 235px;
 }
+
 
 .contacts-list {
     margin: 0;
-    margin-right: 235px;
     margin-bottom: 35px;
     list-style-type: none;
     display: flex;
     padding: 0;
     align-items: center;
-
 }
 
-.contacts-item {
-    margin-right: 27px;
+.social-item {
+    padding: 10px;
 }
 
-.contacts-item:nth-child(3) {
-    margin-right: 235px;
-}
+
+
 
 
 .catalog-filter {
@@ -385,7 +399,17 @@ body {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    
+}
+
+.cost-filter-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.cost-item {
+    width: 143px;
 }
 
 .filter-result {
@@ -522,6 +546,7 @@ body {
 .filter-buttons {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
 }
 
 .setup-button {
@@ -531,6 +556,7 @@ body {
 
 .reset-button {
     background-color: transparent;
+    border: 0;
 }
 
 .filter-result-title {
@@ -553,6 +579,10 @@ body {
 
 .hotel-filter {
     padding-bottom: 70px;
+}
+
+.hotel-filter fieldset {
+    border: 0;
 }
 
 .to-favorites {
