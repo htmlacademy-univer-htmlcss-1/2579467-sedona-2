@@ -58,8 +58,13 @@ body {
     margin: 0 auto;
 }
 
+.logo {
+    height: 64px;
+}
+
 .Sedona-logo {
     display: block;
+    position: relative;
 }
 
 .header-navigation {
@@ -67,6 +72,8 @@ body {
 }
 
 .main-navigation {
+    position: relative;
+    overflow: visible;
     width: 750px;
     display: flex;
     margin-right: 28px;
@@ -81,6 +88,8 @@ body {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    position: relative;
 }
 
 .navigation-user {
@@ -97,9 +106,27 @@ body {
     color: black;
 }
 
+.navigation-link-current {
+    position: relative;
+}
+
+.navigation-link-current::before {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    left: 17px;
+    height: 2px;
+    background-color: #756257;
+    content: "";
+}
+
 .navigation-user .navigation-link {
-    padding: 22px 12px;
+    padding: 14px 12px;
     margin: 0;
+}
+
+.navigation-item {
+    display: block;
 }
 
 .navigation-item.navigation-link {
@@ -154,8 +181,15 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
-    padding: 0;
+    padding: 8px 50px;
     margin: 0;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+
+.navigation-item button {
+    padding: 8px 34px;
 }
 
 .search-link {
@@ -198,10 +232,32 @@ body {
 }
 
 .town-advantages-title {
+    position: relative;
     width: 175px;
     padding-bottom: 62px;
     padding-top: 102px;
 }
+
+.town-advantages-title::before {
+    position: absolute;
+    background-color: #0000004D;
+    content: "";
+    width: 60px;
+    height: 2px;
+    bottom: 30px;
+    left: 58px;
+}
+
+.town-advantages-title.town-advantages-title-add::before {
+    position: absolute;
+    background-color: #FFFFFF4D;
+    content: "";
+    width: 60px;
+    height: 2px;
+    bottom: 30px;
+    left: 58px;
+}
+
 
 .special-item-container {
     display: flex;
@@ -343,6 +399,14 @@ body {
     background-color: #82B3D3;
     width: 232px;
     margin: 0 auto;
+    border-radius: 0 4px 4px 0;
+}
+
+.subscribe-form input {
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    padding: 12px 20px;
 }
 
 .contacts-phone {
@@ -647,6 +711,8 @@ body {
 
 .hotel-filter fieldset {
     border: 0;
+    padding: 0;
+    margin-left: 0;
 }
 
 .to-favorites {
