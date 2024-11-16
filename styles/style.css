@@ -125,9 +125,6 @@ body {
     margin: 0;
 }
 
-.navigation-user .fav-link {
-  padding-top: 4px;
-}
 
 .navigation-item {
     display: block;
@@ -137,7 +134,28 @@ body {
     padding-right: 0;
 }
 
+.fav-container {
+  position: relative;
+}
 
+.fav-container::after {
+      font-family: "PT Sans";
+      font-style: normal;
+      font-weight: 400;
+      content: "12";
+      position: absolute;
+      top: -11px;
+      right: -9px;
+      width: 20px;
+      height: 20px;
+      background: #7DB54F;
+      color: white;
+      font-size: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
 
 .welcome-to-sedona {
     padding-top: 50px;
