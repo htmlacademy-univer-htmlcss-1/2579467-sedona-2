@@ -125,6 +125,7 @@ body {
     margin: 0;
 }
 
+
 .navigation-item {
     display: block;
 }
@@ -133,7 +134,28 @@ body {
     padding-right: 0;
 }
 
+.fav-container {
+  position: relative;
+}
 
+.fav-container::after {
+      font-family: "PT Sans";
+      font-style: normal;
+      font-weight: 400;
+      content: "12";
+      position: absolute;
+      top: -11px;
+      right: -9px;
+      width: 20px;
+      height: 20px;
+      background: #7DB54F;
+      color: white;
+      font-size: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
 
 .welcome-to-sedona {
     padding-top: 50px;
@@ -186,6 +208,18 @@ body {
     border-radius: 4px;
     border: 0;
     cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(97, 80, 72, 1);
+}
+
+.button:focus {
+    background-color: rgba(97, 80, 72, 1);
+}
+
+.button:active {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-item button {
@@ -417,7 +451,17 @@ body {
     margin-right: 235px;
 }
 
+.contacts-phone:hover {
+    color: rgba(117, 97, 87, 1);
+}
 
+.contacts-phone:focus {
+    color: rgba(117, 97, 87, 1);
+}
+
+.contacts-phone:active {
+    color: rgba(117, 97, 87, 0.3);
+}
 
 .e-mail {
     margin: 0;
@@ -455,9 +499,34 @@ body {
     padding: 10px;
 }
 
+.social-item svg {
+  fill:#83B3D3;
+}
 
+.social-item svg:hover {
+  fill: #68A2CA;
+}
 
+.social-item svg:focus {
+  fill: #68A2CA;
+}
 
+.social-item svg:active {
+  fill: rgba(104, 162, 202, 0.3);
+  ;
+}
+
+.academy-item svg:hover {
+  fill: rgba(117, 97, 87, 1);
+}
+
+.academy-item svg:focus {
+  fill: rgba(117, 97, 87, 1);
+}
+
+.academy-item svg:active {
+  fill: rgba(117, 97, 87, 0.3);
+}
 
 .catalog-filter {
     display: flex;
@@ -481,8 +550,18 @@ body {
 }
 
 .filter-result {
+    position: relative;
     width: 1060px;
     margin: 0 auto;
+}
+
+.filter-result::before {
+  position: absolute;
+  content: "";
+  background-color: #E6E6E6;
+  height: 1px;
+  width: 1060px;
+  bottom: 100px;
 }
 
 .filter-header {
@@ -507,13 +586,31 @@ body {
 }
 
 .view-item {
-    margin-right: 40px;
+    margin-right: 8px;
+    padding: 12px 14px;
+    border-radius: 4px;
+    border: 2px solid rgba(229, 229, 229, 1);
+}
+
+.view-current {
+    border-color: black;
 }
 
 .view-item:last-child {
     margin-right: 0;
 }
 
+.view-item:hover {
+  border: 2px solid black;
+}
+
+.view-item:focus{
+  border: 2px solid #68A2CA;
+}
+
+.view-item:active {
+  border: 2px solid black;
+}
 
 .infrastructure-filter, .hotel-type-filter {
     width: 150px;
@@ -550,8 +647,9 @@ body {
         "stars rating";
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 20px;
+    border: 1px solid rgba(230, 230, 230, 1);
 }
 
 .hotel-item img {
@@ -596,15 +694,43 @@ body {
     margin-bottom: 16px;
 }
 
+.to-favorites:hover, .setup-button:hover, .subscribe-button:hover {
+    background-color: rgba(104, 162, 202, 1);
+}
+
+.to-favorites:focus, .setup-button:focus, .subscribe-button:focus {
+    background-color: rgba(104, 162, 202, 1);
+}
+
+.to-favorites:active, .setup-button:active, .subscribe-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .hotel-rating {
     grid-area: rating;
     text-align: right;
     margin: 0;
     padding: 0;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 4px;
+    padding: 8px 22px;
 }
 
 .rating {
     grid-area: stars;
+}
+
+.star-wrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
+.star {
+    color: rgba(131, 179, 211, 1);
+}
+
+.star:not(:last-child) {
+  margin-right: 5px;
 }
 
 
@@ -638,8 +764,8 @@ body {
     margin-bottom: 40px;
 }
 
-.breadcrumbs-item:first-child {
-    margin-right: 28px;
+.breadcrumbs-item:not(:last-child) {
+    margin-right: 14px;
 }
 
 .breadcrumbs-link {
@@ -647,6 +773,42 @@ body {
     color: white;
     text-decoration: none;
 }
+
+.breadcrumbs-link:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+    color: rgba(255, 255, 255, 1);
+}
+
+.breadcrumbs-link:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-link svg {
+  fill: white;
+  position: relative;
+}
+
+.breadcrumbs-link svg::after {
+  position: absolute;
+  background-image: url("../images/arrow.svg");
+  content: "";
+}
+
+.breadcrumbs-link svg:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link svg:focus {
+  fill: white;
+}
+
+.breadcrumbs-link svg:active {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
 
 .catalog-filter-title {
     font-weight: 700;
@@ -686,6 +848,22 @@ body {
     border: 0;
 }
 
+.reset-button:hover {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+
+.reset-button:focus {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 3px #83B3D3 solid;
+}
+
+.reset-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+
 .filter-result-title {
     font-size: 30px;
     line-height: 36px;
@@ -721,6 +899,18 @@ body {
 
 .in-favorites {
     background-color: rgba(125, 181, 79);
+}
+
+.in-favorites:hover {
+    background-color: rgba(108, 158, 66, 1);
+}
+
+.in-favorites:focus {
+    background-color: rgba(108, 158, 66, 1);
+}
+
+.in-favorites:active {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-rating {
@@ -760,6 +950,19 @@ body {
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
+}
+
+.pagination-link:not(.pagination-current):not(.pagination-another):hover {
+    background-color: rgba(104, 162, 202, 1);
+}
+
+.pagination-link:not(.pagination-current):not(.pagination-another):focus {
+    background-color: rgba(104, 162, 202, 1);
+}
+
+.pagination-link:not(.pagination-current):not(.pagination-another):active{
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
