@@ -1146,10 +1146,14 @@ body {
 }
 
 .modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   display: flex;
   margin: 0 auto;
+  transform: translate(-50%, -50%);
 }
 
 .modal {
@@ -1187,10 +1191,23 @@ body {
   background-color: #F2F2F2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/close.svg");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15' width='15' height='15' fill='none'%3E%3Cpath d='M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z' fill='black'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15' width='15' height='15' fill='none'%3E%3Cpath d='M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z' fill='rgba(0,0,0,0.3)'/%3E%3C/svg%3E");
 }
 
 .field-group {
@@ -1204,7 +1221,7 @@ body {
 }
 
 .search-form-field {
-  padding: 12px 20px;
+  padding: 12px 30px;
   background-color: #F2F2F2;
   border: transparent;
   outline: transparent;
@@ -1217,7 +1234,7 @@ body {
 }
 
 .guest-num .search-form-field {
-  width: 71px;
+  width: 45px;
 }
 
 
@@ -1249,7 +1266,7 @@ body {
 }
 
 .children-num {
-  margin-right: 82px;
+  margin-right: 92px;
 }
 
 .search-form-button {
@@ -1300,22 +1317,36 @@ input[type="number"]::-ms-clear {
 
 .search-form-field[type="number"] {
   text-align: center;
-  background-image: url(../images/minus.svg),  url(../images/plus.svg);
+  background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2' width='14' height='2' fill='none'%3E%3Cpath d='M0 0L0 2L14 2V0L0 0Z' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' width='14' height='14' fill='none'%3E%3Cpath d='M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E");
   background-repeat: no-repeat, no-repeat;
-  background-position: 13px 23px, 84px;
+  background-position: 10px 23px, 80px;
 }
 
-.search-form-field[type="text"] {
+.search-form-field[type="number"]:hover {
+  background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2' width='14' height='2' fill='none'%3E%3Cpath d='M0 0L0 2L14 2V0L0 0Z' fill='black' fill-opacity='1'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' width='14' height='14' fill='none'%3E%3Cpath d='M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z' fill='black' fill-opacity='1'/%3E%3C/svg%3E");
+}
+
+.search-form-field[type="number"]:active {
+  background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 2' width='14' height='2' fill='none'%3E%3Cpath d='M0 0L0 2L14 2V0L0 0Z' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' width='14' height='14' fill='none'%3E%3Cpath d='M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z' fill='%23756157' fill-opacity='0.3'/%3E%3C/svg%3E");
+}
+
+.search-form-field[type="text"], .search-form-field[type="date"] {
   background-image: url(../images/date.svg);
   background-repeat: no-repeat;
   background-position: 400px;
 }
 
-.search-form-field[type="text"]:hover {
+.search-form-field[type="date"]:hover {
   background-color: #E6E6E6;
 }
 
-.search-form-field[type="text"]:focus {
+.search-form-field[type="date"]:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
@@ -1368,4 +1399,17 @@ input[type="number"]::-ms-clear {
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
 }
