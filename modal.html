@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="styles/style.css">
-  </head>
-  <body>
-    <div class="page-container">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
         <div class="header-navigation">
@@ -27,7 +28,7 @@
 
           <ul class="navigation-list navigation-user">
             <li class="navigation-item">
-              <a href="modal.html" class="navigation-link">
+              <a href="#" class="navigation-link">
                 <img src="images/search.svg" alt="Поиск" width="20" height="20">
                 <span class="visually-hidden">
                   Поиск
@@ -215,6 +216,52 @@
         </section>
     </footer>
     </div>
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <section class="modal-content">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <h1 class="modal-title">Поиск гостиницы в Седоне</h1>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group arrival-group">
+              <label class="arrival-date" for="arrival-date">Дата&nbspзаезда:</label>
+              <input class="search-form-field field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату" onfocus="(this.type='date')">
+            </p>
+            <p class="arrival-subtitle">Мы не можем отправить вас в прошлое.</p>
+            <p class="field-group departure-group" >
+              <label class="departure-date" for="departure-date">Дата&nbspвыезда:</label>
+              <input class="search-form-field field" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату" onfocus="(this.type='date')">
+            </p>
+            <p class="departure-subtitle">На эти даты есть свободные номера. Пока есть.</p>
+            <div class="guest-num">
+              <p class="field-group">
+                <label class="adults-num" for="adults-num">Взрослые:</label>
+                <input class="search-form-field field" type="number" id="adults-num" name="adults-num" placeholder="2">
+              </p>
+              <p class="field-group">
+                <label class="children-num" for="children-num">Дети:</label>
+                <input class="search-form-field field" type="number" id="children-num" name="children-num" placeholder="1">
+              </p>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  <div class="tooltip-arrow"></div>
+                </span>
+              </span>
+            </div>
+            <button class="button search-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </div>
-  </body>
+
+</body>
 </html>
